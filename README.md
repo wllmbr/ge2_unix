@@ -20,5 +20,5 @@ C: Create mission. The mission sub-menu will walk you through creating a diploma
 
 * Reinforcements: Ships sent to a world already owned by the player will not have the fleets merged, and will likely result in the traveling fleet being lost forever. 
 * Multi-player:	The game only assumes there is one player, need to allow for multiple players to join
-* Internet Multi-Player: The multi-player system should just buffer all of the needed commands for all of the players, which should enable network play pretty easily. Still need to implement sockets in the game and a proper data exchange system. Maybe copy Space Shuttle method?
+* Internet Multi-Player: The multi-player system should just buffer all of the needed commands for all of the players, which should enable network play pretty easily. Still need to implement sockets in the game and a proper data exchange system. Maybe copy [Space Shuttle](https://history.nasa.gov/computers/Ch4-4.html) method?
 * Graphics: Everything is text based right now, should really make this with graphics
