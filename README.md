@@ -15,6 +15,8 @@ S: Display known controlled worlds
 
 C: Create mission. The mission sub-menu will walk you through creating a diplomatic mission to take over another world
 
+Q: Quits the game
+
 
 ## TODO:
 

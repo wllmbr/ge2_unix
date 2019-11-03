@@ -3,14 +3,16 @@
 #include <stdint.h>
 #include "Location.h"
 
-#define HIT_PROBABILITY	0.5
+#define HIT_PROBABILITY	0.75
 
 class Fleet {
 private:
 	Position source;
 	Position target;
+	Position current_position;
 	uint64_t traversal_time_left;
 	uint64_t ship_count;
+	uint64_t next_ship_count;
 	uint16_t owner_id;
 
 public:
@@ -23,7 +25,9 @@ public:
 	void travel_to(Position t);
 	void add_ships(uint64_t count);
 	void subtract_ships(uint64_t count);
+	void stage_ships(uint64_t count);
 	void shore_fleet();
+	void commit_fleet();
 
 	inline Position get_source() {
 		return source;
@@ -31,6 +35,10 @@ public:
 
 	inline Position get_target() {
 		return target;
+	}
+
+	inline Position get_pos(){
+		return current_position;
 	}
 
 	inline uint16_t get_owner() {

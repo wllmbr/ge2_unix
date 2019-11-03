@@ -2,8 +2,10 @@
 #include "Location.h"
 #include "stdint.h"
 
-#define MAX_DEFAULT_SHIP_BUILDING	20
-#define MIN_DEFAULT_SHIP_BUILDING	10
+#define MAX_DEFAULT_SHIP_BUILDING		20
+#define MIN_DEFAULT_SHIP_BUILDING		0
+#define RANGE_DEFAULT_SHIP_BUILDING		(MAX_DEFAULT_SHIP_BUILDING - MIN_DEFAULT_SHIP_BUILDING)
+#define STD_DEV_DEFAULT_SHIP_BUILDING	2
 
 class World {
 private:
@@ -28,6 +30,10 @@ public:
 
 	inline Position get_position() {
 		return pos;
+	}
+
+	inline void set_ship_building_capacity(uint16_t sb){
+		ship_building_capacity = sb;
 	}
 
 

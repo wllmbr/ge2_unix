@@ -12,7 +12,7 @@ Position::Position(double x, double y) {
 	coordinates[1] = y;
 }
 
-void Position::set_postition(double x, double y) {
+void Position::set_position(double x, double y) {
 	coordinates[0] = x;
 	coordinates[1] = y;
 }

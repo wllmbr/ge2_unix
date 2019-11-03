@@ -23,7 +23,8 @@ IMG_CMD := objcopy
 OPT 			:= -O3 -g
 INCLUDE_DIRS 	:= $(addprefix -I, $(SOURCE_DIRS))
 WARN			:= -Wall
-CFLAGS 			:= $(INCLUDE_DIRS) $(OPT) $(WARN)
+LINK			:= -lsfml-window -lsfml-graphics -lsfml-system -lpthread
+CFLAGS 			:= $(INCLUDE_DIRS) $(OPT) $(WARN) $(LINK)
 
 # Output Files
 EXE := $(PRJ_NAME).exe
