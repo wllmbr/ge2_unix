@@ -1,5 +1,6 @@
 #include <Fleet.h>
 
 void Fleet::shore_fleet() {
-	source = target;
+	source 				= target;
+	current_position 	= target;
 }

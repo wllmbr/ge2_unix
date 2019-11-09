@@ -4,6 +4,7 @@
 #include "Location.h"
 
 #define HIT_PROBABILITY	0.75
+#define SHIP_SPEED		3
 
 class Fleet {
 private:
@@ -11,6 +12,7 @@ private:
 	Position target;
 	Position current_position;
 	uint64_t traversal_time_left;
+	uint64_t traversal_time;
 	uint64_t ship_count;
 	uint64_t next_ship_count;
 	uint16_t owner_id;

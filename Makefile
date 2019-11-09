@@ -27,7 +27,7 @@ IMG_CMD := objcopy
 OPT 			:= -O3 -g
 INCLUDE_DIRS 	:= $(addprefix -I, $(SOURCE_DIRS))
 WARN			:= -Wall
-LINK			:= -lsfml-window -lsfml-graphics -lsfml-system -lpthread
+LINK			:= -lsfml-window -lsfml-graphics -lsfml-system -lpthread -lX11
 CFLAGS 			:= $(INCLUDE_DIRS) $(OPT) $(WARN) $(LINK)
 DEPFLAGS		= -MT $@ -MMD -MP -MF $(DEPDIR)/$*.d
 
