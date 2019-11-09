@@ -3,3 +3,6 @@
 *.img
 *.asm
 
+utils/*
+bld/*
+
