@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+apt-get install -y libsfml-dev git binutils gcc 
+
+git clone https://github.com/wllmbr/ge2_unix.git 
