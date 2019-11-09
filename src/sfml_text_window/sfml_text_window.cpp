@@ -38,4 +38,6 @@ void SFML_Text_Window::configure(sf::RenderWindow *scr,
 
     is_in_focus = false;
     text_string = "";
+
+    printf("Installed\n");
 }

@@ -5,12 +5,6 @@ void SFML_Button::poll(sf::Event event)
     /* If the mouse is released when over the button, run callback */
     if(event.type == sf::Event::MouseButtonReleased){
         /* Check if the cursor is within the box */
-        if( (event.mouseButton.button   == sf::Mouse::Button::Left) &&
-            (is_hovered                 == true)
-        ){
-            /* Run callback function */
-            callback();
-        }
         is_pressed = false;
 
     /* If the mouse is pressed over the button, shade it */
@@ -20,6 +14,7 @@ void SFML_Button::poll(sf::Event event)
             (is_hovered                 == true)
         ){
             is_pressed = true;
+            has_rendered_pressed = 5;
         }
     /* If the mouse is hovering over the box, mark that */
     } else if (event.type == sf::Event::MouseMoved){

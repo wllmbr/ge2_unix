@@ -1,15 +1,21 @@
 #include <galactic_empires.h>
 
 void Galactic_Empires::perform_game_tick() {
-	year++;
-	printf("Acting on year %lu\n", year);
 
 	/* Get input from all players */
 
-	uint16_t i;
-	for (i = 0; i < num_loaded_players; i++) {
-		perform_player(i);
+	// uint16_t i;
+	// for (i = 0; i < num_loaded_players; i++) {
+	// 	perform_player(i);
+	// }
+
+	if(perform_year == false){
+		return;
 	}
+	perform_year = false;
+	
+	year++;
+	printf("Acting on year %lu\n", year);
 
 	/* Commit player actions */
 

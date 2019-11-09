@@ -2,6 +2,7 @@
 
 void Galactic_Empires::perform_player(uint16_t id) {
 	char command;
+	// return;
 	printf("Player %d\n", id);
 	while(1){
 		/* Make sure we aren't supposed to die */

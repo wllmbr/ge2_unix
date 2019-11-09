@@ -27,7 +27,8 @@ void SFML_Button::draw(){
 
     sf::Color draw_color(0,0,0);
 
-    if(is_pressed){
+    if((has_rendered_pressed > 0) || (is_pressed)){
+        /* Clicked */
         draw_color.r = 255;
         draw_color.g = 255;
         draw_color.b = 255;
@@ -36,13 +37,18 @@ void SFML_Button::draw(){
         /* Also move the whole button */
         button_string.move(1,1);
         outline.move(1,1);
+        if((has_rendered_pressed > 0) && (!is_pressed)){
+            has_rendered_pressed--;
+        }
 
     } else if(is_hovered){
+        /* Highlight */
         draw_color.r = 255;
         draw_color.g = 255;
         draw_color.b = 255;
         draw_color.a = 255;
     } else {
+        /* Normal color */
         draw_color.r = 192;
         draw_color.g = 192;
         draw_color.b = 192;

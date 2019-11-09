@@ -3,4 +3,5 @@
 
 void Window::install_galaxy(Galactic_Empires *empire){
     galaxy = empire;
+    galaxy->exit_game = false;
 }

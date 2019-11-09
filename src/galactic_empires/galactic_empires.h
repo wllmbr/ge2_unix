@@ -16,6 +16,13 @@
 
 #define DEFAULT_OWNER		0xffff
 
+enum GE_Error_Codes{
+    GE_SUCCESS,
+    GE_INVALID_WORLD,
+    GE_INVALID_OWNER,
+    GE_INVALID_FLEET_SIZE
+};
+
 class Galactic_Empires {
 
 public:
@@ -30,7 +37,14 @@ public:
     void        get_command(uint16_t id);
     void        is_galactic_empire();
 
-    bool        exit_game;
+    GE_Error_Codes send_command(uint16_t player_id,
+                                uint64_t source_id,
+                                uint64_t target_id,
+                                uint64_t size_num);
+
+    bool                    perform_year;
+
+    bool                    exit_game;
     std::vector<Fleet>		all_fleets;
     std::vector<World>		all_worlds;
 

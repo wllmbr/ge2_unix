@@ -10,8 +10,7 @@ SFML_Button::SFML_Button(sf::RenderWindow *scr,
                          int16_t x,
                          int16_t y,
                          int16_t len,
-                         int16_t hgt,
-                         void (*fh)())
+                         int16_t hgt)
 {
     configure(
         scr,
@@ -19,9 +18,14 @@ SFML_Button::SFML_Button(sf::RenderWindow *scr,
         x,
         y,
         len,
-        hgt,
-        fh
+        hgt
     );
+
+    is_pressed = false;
+    is_hovered = false;
+    has_rendered_pressed = 0;
+    text_string.assign("");
+
 }
 
 void SFML_Button::configure(sf::RenderWindow *scr,
@@ -29,12 +33,10 @@ void SFML_Button::configure(sf::RenderWindow *scr,
                             int16_t x,
                             int16_t y,
                             int16_t len,
-                            int16_t hgt,
-                            void (*fh)())
+                            int16_t hgt)
 {
     x_pos       = x;
     y_pos       = y;
-    callback    = fh;
     length      = len;
     height      = hgt;
     is_pressed  = false;

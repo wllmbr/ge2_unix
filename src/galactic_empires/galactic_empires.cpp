@@ -42,5 +42,6 @@ Galactic_Empires::Galactic_Empires() {
 
 Galactic_Empires::~Galactic_Empires()
 {
-
+	printf("Galaxy being destroyed\n");
+	fflush(stdout);
 }
