@@ -20,7 +20,10 @@ Q: Quits the game
 
 ## TODO:
 
-* Reinforcements: Ships sent to a world already owned by the player will not have the fleets merged, and will likely result in the traveling fleet being lost forever. 
+* ~~Reinforcements: Ships sent to a world already owned by the player will not have the fleets merged, and will likely result in the traveling fleet being lost forever.~~
 * Multi-player:	The game only assumes there is one player, need to allow for multiple players to join
 * Internet Multi-Player: The multi-player system should just buffer all of the needed commands for all of the players, which should enable network play pretty easily. Still need to implement sockets in the game and a proper data exchange system. Maybe copy [Space Shuttle](https://history.nasa.gov/computers/Ch4-4.html) method?
-* Graphics: Everything is text based right now, should really make this with graphics
+* ~~Graphics: Everything is text based right now, should really make this with graphics~~
+* Amass Function: It gets annoying in the game to constantly be retelling every world to send ships to another one. Build in a function that will automatically make every world a player owns and send it to the target
+* Supply Lines: This is a maybe. Setup functionality to always have one specific world send ships to another each round
+* World List: Need to add a list of known worlds and their build capacity to the UI

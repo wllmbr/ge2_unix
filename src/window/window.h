@@ -17,6 +17,7 @@
 #define PANEL_MARGIN            20
 #define PANEL_COLUMN_WIDTH      130
 #define PANEL_ROW_HEIGHT        30
+#define FRAME_PERIOD_MS         16
 
 class Window{
 public:

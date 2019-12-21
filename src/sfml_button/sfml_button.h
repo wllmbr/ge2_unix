@@ -33,10 +33,15 @@ public:
     }
 
     inline bool check_pressed(void){
-        if(is_pressed){
-            is_pressed = false;
+
+        /* If the button was pressed but that hasn't been relayed, relay it */
+        if(is_pressed && !last_read_state){
+            last_read_state = true;
             return true;
+
+        /* If its still pressed, return false but don't update */
         } else {
+            last_read_state = false;
             return false;
         }
     }
@@ -53,6 +58,7 @@ private:
     bool is_pressed;
     bool is_hovered;
     int  has_rendered_pressed;
+    bool last_read_state;
 
     std::string text_string;
 
